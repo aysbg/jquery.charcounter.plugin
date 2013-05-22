@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<title>Jquery Char counter example</title>
+	<style>
+	label {
+		display: block;
+	}
+	textarea {
+		min-width: 250px;
+		min-height: 125px;
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<div class="text-holder">
+		<label for="text1">Enter :</label>
+		<textarea cols="10" id="text1" name="text1" rows="5"></textarea>
+	</div>
+	
+	<div class="text-holder">
+		<label for="text2">Enter :</label>
+		<textarea cols="10" id="text2" name="text2" rows="5"></textarea>
+	</div>
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="jquery.charCounter.js"></script>
+	<script>
+	$(function() {
+		$('#text1').charCounter();
+		
+		$('#text2').charCounter({
+			maxCount: 300,
+			countDirection: 'up'
+		});
+	});
+	</script>
+</body>
+</html>
